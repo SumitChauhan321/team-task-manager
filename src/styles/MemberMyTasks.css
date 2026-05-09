@@ -1,0 +1,88 @@
+.member-tasks {
+  padding: 20px;
+}
+
+.member-task-top {
+  margin-bottom: 25px;
+}
+
+.member-task-top h2 {
+  font-size: 32px;
+}
+
+.member-task-top p {
+  color: gray;
+  margin-top: 5px;
+}
+
+.member-task-table {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: #f8fafc;
+}
+
+th,
+td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* Status */
+
+.status {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.todo {
+  background: #ede9fe;
+  color: #7c3aed;
+}
+
+.inprogress {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.done {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+/* Select */
+
+select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  outline: none;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+  th,
+  td {
+    padding: 12px;
+    font-size: 13px;
+  }
+
+  .member-task-top h2 {
+    font-size: 26px;
+  }
+
+}
