@@ -2,7 +2,7 @@ import React, {
   useEffect,
   useState
 } from "react";
-
+import {BASE_URL} from "../services/api";
 import "../styles/AdminTasks.css";
 
 const AdminTasks = () => {
@@ -48,7 +48,7 @@ const AdminTasks = () => {
       localStorage.getItem("token");
 
     const response = await fetch(
-      "http://localhost:8080/tasks",
+      `${BASE_URL}/tasks`,
       {
         headers: {
           Authorization:
@@ -73,7 +73,7 @@ const AdminTasks = () => {
       localStorage.getItem("token");
 
     const response = await fetch(
-      "http://localhost:8080/tasks/projects",
+      `${BASE_URL}/tasks/projects`,
       {
         headers: {
           Authorization:
@@ -99,7 +99,7 @@ const AdminTasks = () => {
         localStorage.getItem("token");
 
       const response = await fetch(
-        `http://localhost:8080/tasks/project-members/${projectId}`,
+        `${BASE_URL}/tasks/project-members/${projectId}`,
         {
           headers: {
             Authorization:
@@ -150,7 +150,7 @@ const AdminTasks = () => {
         localStorage.getItem("token");
 
       await fetch(
-        "http://localhost:8080/tasks",
+        `${BASE_URL}/tasks`,
         {
           method: "POST",
 

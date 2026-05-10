@@ -56,8 +56,7 @@
   overflow-x: auto;
 
   box-shadow:
-    0 2px 10px
-    rgba(0,0,0,0.08);
+    0 2px 10px rgba(0, 0, 0, 0.08);
 }
 
 table {
@@ -88,7 +87,19 @@ td {
   color: #0f172a;
   font-size: 14px;
 }
+td {
+  color: #0f172a;
 
+  font-size: 14px;
+
+  max-width: 200px;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
 /* ACTIONS */
 
 .actions {
@@ -156,7 +167,7 @@ td {
   inset: 0;
 
   background:
-    rgba(0,0,0,0.4);
+    rgba(0, 0, 0, 0.4);
 
   display: flex;
   justify-content: center;
@@ -177,8 +188,7 @@ td {
   border-radius: 14px;
 
   box-shadow:
-    0 4px 20px
-    rgba(0,0,0,0.2);
+    0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .modal h3 {
@@ -270,8 +280,7 @@ td {
   text-align: center;
 
   box-shadow:
-    0 4px 20px
-    rgba(0,0,0,0.2);
+    0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .delete-popup h3 {
@@ -393,8 +402,7 @@ td {
   transition: 0.3s ease;
 
   box-shadow:
-    0 2px 6px
-    rgba(0,0,0,0.08);
+    0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
 /* EDIT BUTTON */

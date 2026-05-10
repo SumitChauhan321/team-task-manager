@@ -2,7 +2,7 @@ import React, {
   useEffect,
   useState
 } from "react";
-
+import {BASE_URL} from "../services/api";
 import "../styles/AdminProjects.css";
 
 const AdminProjects = () => {
@@ -47,7 +47,7 @@ const AdminProjects = () => {
         localStorage.getItem("token");
 
       const response = await fetch(
-        "http://localhost:8080/admin/projects",
+        `${BASE_URL}/admin/projects`,
         {
           headers: {
             Authorization:
@@ -86,7 +86,7 @@ const AdminProjects = () => {
           localStorage.getItem("token");
 
         await fetch(
-          "http://localhost:8080/admin/projects",
+          `${BASE_URL}/admin/projects`,
           {
             method: "POST",
 
@@ -128,7 +128,7 @@ const AdminProjects = () => {
           localStorage.getItem("token");
 
         await fetch(
-          `http://localhost:8080/admin/projects/${projectId}`,
+          `${BASE_URL}/admin/projects/${projectId}`,
           {
             method: "PUT",
 
@@ -182,7 +182,7 @@ const AdminProjects = () => {
           localStorage.getItem("token");
 
         await fetch(
-          `http://localhost:8080/admin/projects/${deleteId}`,
+          `${BASE_URL}/admin/projects/${deleteId}`,
           {
             method: "DELETE",
 

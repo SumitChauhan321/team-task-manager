@@ -23,6 +23,21 @@ const Sidebar = () => {
   const [open, setOpen]
     = useState(false);
 
+  /* LOGOUT POPUP */
+
+  const [showLogoutPopup,
+    setShowLogoutPopup]
+    = useState(false);
+
+  /* CONFIRM LOGOUT */
+
+  const handleLogout = () => {
+
+    localStorage.clear();
+
+    window.location.href = "/";
+  };
+
   return (
     <>
 
@@ -195,17 +210,14 @@ const Sidebar = () => {
 
         <div className="logout">
 
-          <Link
-            to="/"
-            onClick={() => {
-
-              localStorage.clear();
-
-              setOpen(false);
-            }}
+          <button
+            className="logout-btn"
+            onClick={() =>
+              setShowLogoutPopup(true)
+            }
           >
             🚪 Logout
-          </Link>
+          </button>
 
         </div>
 
@@ -241,6 +253,49 @@ const Sidebar = () => {
         </div>
 
       </div>
+
+      {/* LOGOUT POPUP */}
+
+      {showLogoutPopup && (
+
+        <div className="popup-overlay">
+
+          <div className="popup-box">
+
+            <h3>
+              Logout
+            </h3>
+
+            <p>
+              Are you sure you want
+              to logout?
+            </p>
+
+            <div className="popup-buttons">
+
+              <button
+                className="cancel-btn"
+                onClick={() =>
+                  setShowLogoutPopup(false)
+                }
+              >
+                Cancel
+              </button>
+
+              <button
+                className="confirm-btn"
+                onClick={handleLogout}
+              >
+                Confirm
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      )}
 
     </>
   );

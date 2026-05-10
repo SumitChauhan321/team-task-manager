@@ -2,7 +2,7 @@ import React, {
   useEffect,
   useState
 } from "react";
-
+import {BASE_URL} from "../services/api";
 import "../styles/MemberProjects.css";
 
 const MemberProjects = () => {
@@ -24,7 +24,7 @@ const MemberProjects = () => {
         localStorage.getItem("userId");
 
       const response = await fetch(
-        `http://localhost:8080/member-features/projects/${userId}`,
+        `${BASE_URL}/member-features/projects/${userId}`,
         {
           headers: {
             Authorization:

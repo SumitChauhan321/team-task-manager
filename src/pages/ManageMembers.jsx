@@ -2,7 +2,7 @@ import React, {
   useEffect,
   useState
 } from "react";
-
+import {BASE_URL} from "../services/api";
 import "../styles/ManageMembers.css";
 
 const ManageMembers = () => {
@@ -47,7 +47,7 @@ const ManageMembers = () => {
       localStorage.getItem("token");
 
     const response = await fetch(
-      "http://localhost:8080/admin/projects",
+      `${BASE_URL}/admin/projects`,
       {
         headers: {
           Authorization:
@@ -77,7 +77,7 @@ const ManageMembers = () => {
       localStorage.getItem("token");
 
     const response = await fetch(
-      `http://localhost:8080/members/users/${projectId}`,
+      `${BASE_URL}/members/users/${projectId}`,
       {
         headers: {
           Authorization:
@@ -105,7 +105,7 @@ const ManageMembers = () => {
       localStorage.getItem("token");
 
     const response = await fetch(
-      "http://localhost:8080/members",
+      `${BASE_URL}/members`,
       {
         headers: {
           Authorization:
@@ -118,7 +118,7 @@ const ManageMembers = () => {
 
       const data =
         await response.json();
-
+      console.log(data);
       setMembers(data);
     }
   };
@@ -156,7 +156,7 @@ const ManageMembers = () => {
         localStorage.getItem("token");
 
       const response = await fetch(
-        "http://localhost:8080/members",
+        `${BASE_URL}/members`,
         {
           method: "POST",
 
@@ -231,7 +231,7 @@ const ManageMembers = () => {
         localStorage.getItem("token");
 
       await fetch(
-        `http://localhost:8080/members/${selectedMemberId}`,
+        `${BASE_URL}/members/${selectedMemberId}`,
         {
           method: "DELETE",
 

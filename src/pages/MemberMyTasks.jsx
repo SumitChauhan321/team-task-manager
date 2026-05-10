@@ -2,7 +2,7 @@ import React, {
   useEffect,
   useState
 } from "react";
-
+import {BASE_URL} from "../services/api";
 import "../styles/MemberMyTasks.css";
 
 const MemberMyTasks = () => {
@@ -24,7 +24,7 @@ const MemberMyTasks = () => {
         localStorage.getItem("userId");
 
       const response = await fetch(
-        `http://localhost:8080/member-features/tasks/${userId}`,
+        `${BASE_URL}/member-features/tasks/${userId}`,
         {
           headers: {
             Authorization:
@@ -59,7 +59,7 @@ const MemberMyTasks = () => {
         localStorage.getItem("token");
 
       const response = await fetch(
-        `http://localhost:8080/member-features/tasks/${taskId}`,
+        `${BASE_URL}/member-features/tasks/${taskId}`,
         {
           method: "PUT",
 

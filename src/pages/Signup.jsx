@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../styles/signup.css";
 import { useNavigate, Link } from "react-router-dom";
-
+import {BASE_URL} from "../services/api";
 const Signup = () => {
   const navigate = useNavigate();
 
@@ -22,7 +22,7 @@ const Signup = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:8080/auth/signup", {
+      const response = await fetch(`${BASE_URL}/auth/signup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

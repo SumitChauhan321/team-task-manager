@@ -2,7 +2,7 @@ import React, {
   useEffect,
   useState
 } from "react";
-
+import {BASE_URL} from "../services/api";
 import "../styles/dashboard.css";
 
 const AdminDashboard = () => {
@@ -21,7 +21,7 @@ const AdminDashboard = () => {
         localStorage.getItem("token");
 
       const response = await fetch(
-        "http://localhost:8080/dashboard/admin",
+        `${BASE_URL}/dashboard/admin`,
         {
           headers: {
             Authorization:
