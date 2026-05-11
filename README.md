@@ -109,6 +109,36 @@ saurabh@123
 
 ---
 
+# Project Setup
+
+## Backend Setup
+
+### 1. Open Backend Project
+
+Open the Spring Boot project in:
+- IntelliJ IDEA
+or
+- Eclipse
+
+---
+
+### 2. Configure Database
+
+Update `application.properties`
+
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/team_task_manager
+
+spring.datasource.username=root
+
+spring.datasource.password=your_password
+
+spring.jpa.hibernate.ddl-auto=update
+
+
+
+
+
 # Project Objective
 
 The main objective of this project is to help teams organize projects and tasks efficiently with proper role-based management.
