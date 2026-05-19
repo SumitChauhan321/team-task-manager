@@ -9,142 +9,33 @@
   justify-content: center;
   align-items: center;
 
-  padding: 8px;
+  padding: 12px;
 }
 
 /* CONTAINER */
 
 .signup-container {
   width: 100%;
-  max-width: 820px;
+  max-width: 400px;
 
   background: white;
 
   border-radius: 14px;
 
-  overflow: hidden;
-
-  display: flex;
-
-  min-height: 540px;
+  padding: 26px 22px;
 
   box-shadow:
     0 4px 16px
     rgba(0,0,0,0.08);
 }
 
-/* LEFT */
-
-.signup-left {
-  width: 27%;
-
-  background:
-    linear-gradient(
-      180deg,
-      #f0fdf4,
-      #ecfdf5
-    );
-
-  padding: 18px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  gap: 28px;
-}
-
-/* LOGO */
-
-.logo-box {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.logo-icon {
-  width: 32px;
-  height: 32px;
-
-  background: #22c55e;
-
-  color: white;
-
-  border-radius: 8px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.logo-box h2 {
-  font-size: 16px;
-
-  color: #16a34a;
-}
-
-/* LEFT CONTENT */
-
-.left-content h1 {
-  font-size: 22px;
-
-  line-height: 1.2;
-
-  color: #0f172a;
-
-  margin-bottom: 6px;
-}
-
-.left-content p {
-  font-size: 12px;
-
-  line-height: 1.4;
-
-  color: #64748b;
-}
-
-/* FEATURES */
-
-.feature-wrapper {
-  display: flex;
-  flex-direction: column;
-
-  gap: 8px;
-}
-
-.feature-card {
-  background: white;
-
-  padding: 9px 10px;
-
-  border-radius: 8px;
-
-  font-size: 12px;
-  font-weight: 600;
-
-  color: #0f172a;
-
-  box-shadow:
-    0 2px 6px
-    rgba(0,0,0,0.04);
-}
-
-/* RIGHT */
-
-.signup-right {
-  width: 73%;
-
-  padding: 22px 26px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 /* HEADER */
+
+.signup-header {
+  text-align: center;
+
+  margin-bottom: 18px;
+}
 
 .signup-header h2 {
   font-size: 26px;
@@ -157,9 +48,7 @@
 .signup-header p {
   color: #64748b;
 
-  margin-bottom: 14px;
-
-  font-size: 12px;
+  font-size: 13px;
 }
 
 /* FORM */
@@ -169,18 +58,16 @@
   flex-direction: column;
 }
 
-/* INPUT GROUP */
+/* INPUT */
 
 .signup-input-group {
-  margin-bottom: 9px;
+  margin-bottom: 12px;
 }
-
-/* INPUT */
 
 .signup-input-group input {
   width: 100%;
 
-  height: 38px;
+  height: 40px;
 
   border: 1px solid #dbe4ee;
 
@@ -204,14 +91,14 @@
 /* ROLE */
 
 .role-section {
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .role-title {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
 
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 
   color: #0f172a;
 }
@@ -227,7 +114,7 @@
 .role-card {
   flex: 1;
 
-  height: 36px;
+  height: 38px;
 
   border: 1px solid #dbe4ee;
 
@@ -268,7 +155,7 @@
 
   text-align: center;
 
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 /* BUTTON */
@@ -276,7 +163,7 @@
 .signup-form button {
   width: 100%;
 
-  height: 38px;
+  height: 40px;
 
   background: #22c55e;
 
@@ -303,7 +190,7 @@
 .login-text {
   text-align: center;
 
-  margin-top: 10px;
+  margin-top: 12px;
 
   font-size: 12px;
 
@@ -324,45 +211,16 @@
   text-decoration: underline;
 }
 
-/* TABLET */
-
-@media (max-width: 700px) {
-
-  .signup-container {
-    flex-direction: column;
-
-    min-height: auto;
-  }
-
-  .signup-left {
-    display: none;
-  }
-
-  .signup-right {
-    width: 100%;
-
-    padding: 18px;
-  }
-
-  .signup-header h2 {
-    font-size: 24px;
-  }
-
-  .role-options {
-    flex-direction: column;
-  }
-}
-
 /* MOBILE */
 
 @media (max-width: 480px) {
 
   .signup-page {
-    padding: 6px;
+    padding: 10px;
   }
 
-  .signup-right {
-    padding: 16px;
+  .signup-container {
+    padding: 22px 18px;
   }
 
   .signup-header h2 {
@@ -370,120 +228,23 @@
   }
 
   .signup-input-group input {
-    height: 36px;
-
-    font-size: 12px;
-  }
-
-  .role-card {
-    height: 34px;
-
-    font-size: 11px;
-  }
-
-  .signup-form button {
-    height: 36px;
-
-    font-size: 12px;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/* MOBILE */
-
-@media (max-width: 700px) {
-
-  .signup-container {
-    flex-direction: column;
-
-    min-height: auto;
-  }
-
-  .signup-left {
-    display: none;
-  }
-
-  .signup-right {
-    width: 100%;
-
-    padding: 18px;
-  }
-
-  .signup-header h2 {
-    font-size: 24px;
-  }
-
-  /* ROLE BUTTONS HORIZONTAL */
-
-  .role-options {
-    display: flex;
-
-    flex-direction: row;
-
-    gap: 8px;
-  }
-
-  .role-card {
-    flex: 1;
-
     height: 38px;
 
     font-size: 12px;
-
-    padding: 0 10px;
   }
-}
-
-/* SMALL MOBILE */
-
-@media (max-width: 480px) {
-
-  .signup-page {
-    padding: 6px;
-  }
-
-  .signup-right {
-    padding: 16px;
-  }
-
-  .signup-header h2 {
-    font-size: 22px;
-  }
-
-  .signup-input-group input {
-    height: 36px;
-
-    font-size: 12px;
-  }
-
-  /* KEEP ROLE BUTTONS HORIZONTAL */
 
   .role-options {
-    flex-direction: row;
-
     gap: 6px;
   }
 
   .role-card {
-    height: 34px;
+    height: 36px;
 
     font-size: 11px;
-
-    padding: 0 8px;
   }
 
   .signup-form button {
-    height: 36px;
+    height: 38px;
 
     font-size: 12px;
   }

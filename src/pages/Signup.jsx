@@ -34,8 +34,6 @@ const Signup = () => {
   const [message, setMessage]
     = useState("");
 
-  /* SIGNUP */
-
   const handleSignup =
     async (e) => {
 
@@ -117,222 +115,162 @@ const Signup = () => {
 
       <div className="signup-container">
 
-        {/* LEFT */}
+        <div className="signup-header">
 
-        <div className="signup-left">
+          <h2>
+            Sign Up
+          </h2>
 
-          <div className="logo-box">
-
-            <div className="logo-icon">
-              ✓
-            </div>
-
-            <h2>
-              Team Task Manager
-            </h2>
-
-          </div>
-
-          <div className="left-content">
-
-            <h1>
-              Manage Your Team
-            </h1>
-
-            <p>
-              Organize projects,
-              tasks and members
-              in one place.
-            </p>
-
-          </div>
-
-          <div className="feature-wrapper">
-
-            <div className="feature-card">
-              📁 Projects
-            </div>
-
-            <div className="feature-card">
-              ✅ Tasks
-            </div>
-
-            <div className="feature-card">
-              👥 Members
-            </div>
-
-          </div>
+          <p>
+            Create your Team Task Manager account
+          </p>
 
         </div>
 
-        {/* RIGHT */}
+        <form
+          className="signup-form"
+          onSubmit={handleSignup}
+        >
 
-        <div className="signup-right">
+          {/* NAME */}
 
-          <div className="signup-header">
+          <div className="signup-input-group">
 
-            <h2>
-              Sign Up
-            </h2>
-
-            <p>
-              Create your account
-            </p>
+            <input
+              type="text"
+              placeholder="Full Name"
+              value={name}
+              onChange={(e) =>
+                setName(
+                  e.target.value
+                )
+              }
+              required
+            />
 
           </div>
 
-          <form
-            className="signup-form"
-            onSubmit={handleSignup}
-          >
+          {/* EMAIL */}
 
-            {/* NAME */}
+          <div className="signup-input-group">
 
-            <div className="signup-input-group">
+            <input
+              type="email"
+              placeholder="Email Address"
+              value={email}
+              onChange={(e) =>
+                setEmail(
+                  e.target.value
+                )
+              }
+              required
+            />
 
-              <input
-                type="text"
-                placeholder="Full Name"
-                value={name}
-                onChange={(e) =>
-                  setName(
-                    e.target.value
-                  )
+          </div>
+
+          {/* PASSWORD */}
+
+          <div className="signup-input-group">
+
+            <input
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) =>
+                setPassword(
+                  e.target.value
+                )
+              }
+              required
+            />
+
+          </div>
+
+          {/* CONFIRM */}
+
+          <div className="signup-input-group">
+
+            <input
+              type="password"
+              placeholder="Confirm Password"
+              value={confirmPassword}
+              onChange={(e) =>
+                setConfirmPassword(
+                  e.target.value
+                )
+              }
+              required
+            />
+
+          </div>
+
+          {/* ROLE */}
+
+          <div className="role-section">
+
+            <p className="role-title">
+              Select Role
+            </p>
+
+            <div className="role-options">
+
+              <div
+                className={`role-card ${
+                  role === "ADMIN"
+                  ?
+                  "active-role"
+                  :
+                  ""
+                }`}
+                onClick={() =>
+                  setRole("ADMIN")
                 }
-                required
-              />
+              >
+                🛡 Admin
+              </div>
 
-            </div>
-
-            {/* EMAIL */}
-
-            <div className="signup-input-group">
-
-              <input
-                type="email"
-                placeholder="Email Address"
-                value={email}
-                onChange={(e) =>
-                  setEmail(
-                    e.target.value
-                  )
+              <div
+                className={`role-card ${
+                  role === "MEMBER"
+                  ?
+                  "active-role"
+                  :
+                  ""
+                }`}
+                onClick={() =>
+                  setRole("MEMBER")
                 }
-                required
-              />
-
-            </div>
-
-            {/* PASSWORD */}
-
-            <div className="signup-input-group">
-
-              <input
-                type="password"
-                placeholder="Password"
-                value={password}
-                onChange={(e) =>
-                  setPassword(
-                    e.target.value
-                  )
-                }
-                required
-              />
-
-            </div>
-
-            {/* CONFIRM */}
-
-            <div className="signup-input-group">
-
-              <input
-                type="password"
-                placeholder="Confirm Password"
-                value={confirmPassword}
-                onChange={(e) =>
-                  setConfirmPassword(
-                    e.target.value
-                  )
-                }
-                required
-              />
-
-            </div>
-
-            {/* ROLE */}
-
-            <div className="role-section">
-
-              <p className="role-title">
-                Select Role
-              </p>
-
-              <div className="role-options">
-
-                <div
-                  className={`role-card ${
-                    role === "ADMIN"
-                    ?
-                    "active-role"
-                    :
-                    ""
-                  }`}
-                  onClick={() =>
-                    setRole("ADMIN")
-                  }
-                >
-                  🛡 Admin
-                </div>
-
-                <div
-                  className={`role-card ${
-                    role === "MEMBER"
-                    ?
-                    "active-role"
-                    :
-                    ""
-                  }`}
-                  onClick={() =>
-                    setRole("MEMBER")
-                  }
-                >
-                  👤 Member
-                </div>
-
+              >
+                👤 Member
               </div>
 
             </div>
 
-            {/* MESSAGE */}
+          </div>
 
-            {message && (
+          {message && (
 
-              <p className="error-msg">
-                {message}
-              </p>
-
-            )}
-
-            {/* BUTTON */}
-
-            <button type="submit">
-              Sign Up
-            </button>
-
-            {/* LOGIN */}
-
-            <p className="login-text">
-
-              Already have an account?
-
-              <Link to="/">
-                Login
-              </Link>
-
+            <p className="error-msg">
+              {message}
             </p>
 
-          </form>
+          )}
 
-        </div>
+          <button type="submit">
+            Sign Up
+          </button>
+
+          <p className="login-text">
+
+            Already have an account?
+
+            <Link to="/">
+              Login
+            </Link>
+
+          </p>
+
+        </form>
 
       </div>
 
