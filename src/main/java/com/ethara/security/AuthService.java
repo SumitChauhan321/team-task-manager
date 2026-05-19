@@ -36,7 +36,7 @@ public class AuthService {
 			throw new IllegalArgumentException("User already exits");
 
 		User user1 = new User();
-		user1.setRole("MEMBER");
+		user1.setRole(signupRequestDto.getRole());
 		user1.setPassword(passwordEncoder.encode(signupRequestDto.getPassword()));
 		user1.setName(signupRequestDto.getName());
 		user1.setEmail(signupRequestDto.getEmail());
